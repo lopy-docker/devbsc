@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# geth attach /data/bsc/geth.ipc
+
+geth attach ${BSC_LOCAL_DIR}/${NODE_NAME}/geth.ipc
