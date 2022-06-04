@@ -15,6 +15,8 @@ wget   $(curl -s https://api.github.com/repos/bnb-chain/bsc/releases/latest |gre
 chmod +x geth_linux
 mv geth_linux /usr/local/bin/geth
 
+# user
+useradd -m -u 1000  bscuser
 # var
 
 mkdir ${BSC_LOCAL_DIR} -p
