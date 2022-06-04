@@ -23,6 +23,8 @@ mkdir ${BSC_LOCAL_DIR} -p
 
 cp /tmp/genesis.json ${BSC_LOCAL_DIR}
 
+chown -R bscuser:bscuser ${BSC_LOCAL_DIR}
+
 # 
 #  init node named node1
 # 可以加一个if
