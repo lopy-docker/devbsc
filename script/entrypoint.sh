@@ -3,7 +3,6 @@
 
 #  init node named node1
 # 可以加一个if
-geth --datadir ${BSC_LOCAL_DIR}/${NODE_NAME} init ${BSC_LOCAL_DIR}/genesis.json
 
 geth --datadir ${BSC_LOCAL_DIR}/${NODE_NAME} --networkid ${NETWORK_ID} \
   --http --http.addr=0.0.0.0 --http.port=${HTTP_PORT} \

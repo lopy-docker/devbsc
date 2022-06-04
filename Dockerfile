@@ -7,6 +7,7 @@ ADD script/install.sh /tmp/install.sh
 ADD script/entrypoint.sh /bsc/local/entrypoint.sh
 
 ADD script/console /usr/local/bin
+ADD script/initnode /usr/local/bin
 
 ENV NETWORK_ID=1000
 ENV BSC_LOCAL_DIR=/bsc/local
@@ -16,6 +17,10 @@ ENV NODE_NAME=node1
 
 WORKDIR /bsc/local
 
-RUN chmod +x /bsc/local/entrypoint.sh && chmod +x /tmp/install.sh && chmod +x /usr/local/bin/console && /tmp/install.sh
+RUN chmod +x /bsc/local/entrypoint.sh \
+    && chmod +x /tmp/install.sh \
+    && chmod +x /usr/local/bin/console \
+    && chmod +x /usr/local/bin/initnode \
+    && /tmp/install.sh
 
 CMD ["/bsc/local/entrypoint.sh"]

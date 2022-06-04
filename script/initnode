@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# geth attach /data/bsc/geth.ipc
+
+geth --datadir ${BSC_LOCAL_DIR}/${NODE_NAME} init ${BSC_LOCAL_DIR}/genesis.json
